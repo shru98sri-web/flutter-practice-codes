@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "620438430156",
+    "project_id": "fir-two-e2687",
+    "storage_bucket": "fir-two-e2687.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:620438430156:android:8274310e5faef26153fd69",
+        "android_client_info": {
+          "package_name": "com.example.firebase_two"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5x9KdZyVF04gpWzqpjbtAIcslg84Nx7s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
