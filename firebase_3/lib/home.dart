@@ -24,7 +24,13 @@ class _HomeState extends State<Home> {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(title: Text('push notification')),
-      body: Center(child: Text('This is push notification tutorial')),
+      body: Center(
+        // child: Text('This is push notification tutorial')
+        child: TextButton(
+          onPressed: () => throw Exception(),
+          child: const Text("Throw Test Exception"),
+        ),
+      ),
     );
   }
 }

@@ -1,13 +1,11 @@
-import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 
 import 'home.dart';
 
-Future<void> _backgroundMessageHandler(RemoteMessage message) async {
-  await Firebase.initializeApp();
-}
-
+// Future<void> _backgroundMessageHandler(RemoteMessage message) async {
+//   await Firebase.initializeApp();
+// }
+//
 // void main() async {
 //   WidgetsFlutterBinding.ensureInitialized();
 //   await Firebase.initializeApp();
@@ -51,7 +49,7 @@ class MyAppush extends StatelessWidget {
 //     );
 //   }
 // }
-
+//
 // class NotificationService {
 //   FirebaseMessaging messaging = FirebaseMessaging.instance;
 //

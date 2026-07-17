@@ -1,17 +1,32 @@
+import 'dart:ui';
+
 import 'package:firebase_3/main_push2.dart';
-import 'package:firebase_3/push_notification.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 
 import 'firebase_options.dart';
 
-void main() async {
+// void main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+//
+//   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+//   //
+//   FirebaseMessaging.onBackgroundMessage(firebaseMessagingBackgroundHandler);
+//
+//   runApp(const MyAppush());
+// }
+
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  //
-  FirebaseMessaging.onBackgroundMessage(firebaseMessagingBackgroundHandler);
-
-  runApp(const MyAppush());
+  FlutterError.onError = (errorDetails) {
+    FirebaseCrashlytics.instance.recordFlutterFatalError(errorDetails);
+  };
+  // Pass all uncaught asynchronous errors that aren't handled by the Flutter framework to Crashlytics
+  PlatformDispatcher.instance.onError = (error, stack) {
+    FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
+    return true;
+  };
+  runApp(MyAppush());
 }
