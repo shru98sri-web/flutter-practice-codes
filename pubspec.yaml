@@ -1,4 +1,4 @@
-name: physics_one
+name: untitled1
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -19,7 +19,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.12.1
+  sdk: ^3.11.5
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -30,35 +30,56 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_web_plugins: # Built-in, needed for web detection
+      sdk: flutter
+
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
+
   cupertino_icons: ^1.0.8
-  fl_chart: ^0.66.0
+  quickalert: ^1.1.0
+  roundcheckbox: ^2.0.5
+  group_button: ^5.3.4
+  http: ^1.6.0
+  file_picker: ^8.0.0
+  flame: ^1.10.0
+  image_picker: ^1.1.0
+  camera: ^0.11.0+2
   path_provider: ^2.1.3
-  share_plus: ^7.2.1
-  csv: ^6.0.0          # CSV डेटा फॉरमॅटिंगसाठी
-  universal_html: ^2.2.4 # वेब आणि मोबाईलवर फाईल डाऊनलोड करण्यासाठी
-  flutter_math_fork: ^0.7.2 # flutter_math चे अपडेटेड व्हर्जन
-  math_expressions: ^2.4.0
-  url_launcher: ^6.3.1
-  file_picker: ^8.1.7    # Cross-platform file saving (Desktop/Mobile)
-  shared_preferences: ^2.3.5
-  sensors_plus: ^6.0.0 # लेटेस्ट गायरोस्कोप सेन्सर पॅकेज
-  flutter_bloc: ^8.1.6  # Business logic state management
-  geolocator: ^13.0.0    # Hardware-level live GPS streaming
-  firebase_core: ^3.0.0       # Global core platform configurations
-  cloud_firestore: ^5.0.0     # Scalable real-time document streaming data warehouse
-  flutter_riverpod: ^3.3.2
-  archive: ^4.0.9
+  image_cropper: ^8.0.2
+  permission_handler: ^11.3.1
+  gal: ^2.3.2
+  maps_launcher: ^3.0.0+1
+  path: ^1.9.1
+  shared_preferences: ^2.5.5
+  flutter_secure_storage: ^9.0.0
+  geolocator: ^14.0.2
+  flutter_launcher_icons: ^0.14.4
+  provider: ^6.1.5+1
+  flutter_splash_screen: ^4.0.0
+  sqflite: ^2.4.3
+  sqflite_common_ffi: ^2.3.4
+  intl: ^0.19.0
+  hive_ce: ^2.10.1
+  hive_ce_flutter: ^2.3.4
+  just_audio: ^0.10.6
+  video_player: ^2.13.0
+  chewie: ^1.13.1
+  open_filex: ^4.5.0
+  syncfusion_flutter_pdfviewer: ^28.1.3
 
 
 
 
 
 dev_dependencies:
+
   flutter_test:
     sdk: flutter
+  build_runner: ^2.4.9
+  hive_ce_generator: ^1.11.2
+
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -66,22 +87,45 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^6.0.0
+  flutter_native_splash: ^2.4.6
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
 flutter:
-
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  # तुमच्या सर्व इमेजेस आणि ऑडिओ फाईल्सचा योग्य सिंटॅक्स:
+  assets:
+    - images/birthday.jpg
+    - images/andal4.jpg
+    - images/Screenshot.png
+    - images/unnamed.png
+    - images/picsart.jpg
+    - images/Picture4.jpg
+    - audio/
+    - video/
+# हा विभाग मुख्य समासाला (Left margin) लागून असायला हवा
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "images/Picture4.jpg" # अ‍ॅसेट्सच्या पाथशी जुळणारा पाथ ठेवा
+  min_sdk_android: 21
+  web:
+    generate: true
+    image_path: "images/Picture4.jpg"
+    background_color: "#ffffff" # वास्तविक हेक्स कोड टाका
+    theme_color: "#01579b"      # वास्तविक हेक्स कोड टाका
+  windows:
+    generate: true
+    image_path: "images/Picture4.jpg"
+    icon_size: 48
+  macos:
+    generate: true
+    image_path: "images/Picture4.jpg"
+
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
@@ -108,5 +152,12 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
-dependency_overrides:
-  flutter_plugin_android_lifecycle: 2.0.22
+flutter_native_splash:
+  color: "#ffffff"               # Background color of splash screen
+  image: images/picsart.jpg # Path to your logo asset
+
+  android_12:
+    image: images/picsart.jpg
+    color: "#ffffff"
+
+  web: false
