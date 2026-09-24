@@ -1,17 +1,13 @@
-# physics_one
-
-A new Flutter project.
+# Edutech codes
+ 
+All the codes here are sorted based on topic 
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+All the topics used varies from basic to advanced research level codes taken from various websites.
 
-A few resources to get you started if this is your first Flutter project:
+Important topics in advanced physics and photonics are covered ranging from concepts, laboratory instrumentation and phenomena
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+Disclaimer:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+EEVENTHOUGH THIS IS A PRACTICE CODE THE CODE IS OF STANDARD QUALITY 
